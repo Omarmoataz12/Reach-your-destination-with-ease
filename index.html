@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>أوصلي بسهولة | تجربة</title>
+<style>
+ :root{--navy:#f1f5f9;--teal:#18b8ad;--pale:#172638;--gold:#e5b85c}
+*{box-sizing:border-box}body{margin:0;font-family:Tahoma,Arial,sans-serif;background:linear-gradient(145deg,#080f19,#101d2b 55%,#102b32);color:var(--navy);min-height:100vh}
+header{background:linear-gradient(120deg,#050b13,#102b3d 60%,#07514f);color:#fff;padding:30px 18px 38px;text-align:center;border-radius:0 0 28px 28px;border-bottom:1px solid #244452}
+.brand{font-size:30px;font-weight:800;margin:4px}.sub{opacity:.88;font-size:14px}
+.wrap{max-width:760px;margin:-18px auto 36px;padding:0 14px}
+.card{background:#111e2c;border:1px solid #26394a;border-radius:20px;padding:22px;margin:14px 0;box-shadow:0 12px 32px #0005}
+h2{font-size:20px;margin:0 0 14px;color:#fff}p{line-height:1.8}
+input,select{width:100%;padding:14px;border:1px solid #34485a;border-radius:12px;font-size:16px;margin:7px 0 12px;background:#0b1520;color:#f1f5f9}
+button,.btn{border:0;border-radius:12px;padding:14px 18px;font-size:16px;font-weight:700;cursor:pointer;text-decoration:none;display:inline-block;text-align:center}
+.primary{background:var(--teal);color:#041817;width:100%}.wa{background:#159b59;color:white;width:100%;margin-top:12px}
+.reason{display:block;width:100%;text-align:right;background:#172638;color:#edf5fa;margin:8px 0;border:1px solid #2b4354}
+.reason.active{border:2px solid var(--teal);background:#123b3b}
+.small{font-size:12px;color:#9aabba}.hidden{display:none!important}
+.tag{display:inline-block;background:#253342;color:#e5c77f;padding:6px 10px;border-radius:20px;font-size:12px}
+footer{text-align:center;color:#8193a4;font-size:12px;padding:20px}
+</style>
+</head>
+<body>
+<header>
+  <div class="tag">نسخة تجريبية</div>
+  <div class="brand">🚘 أوصلي بسهولة</div>
+  <div class="sub">امسح الكود.. اختار السبب.. وابعت تنبيه لصاحب العربية</div>
+</header>
+<main class="wrap">
+  <section class="card">
+    <h2>السلام عليكم ورحمة الله وبركاته</h2>
+    <p>اللهم صلِّ وسلم وبارك على سيدنا محمد ﷺ</p>
+    <p class="small">دي تجربة مبدئية للمنصة. اختار طريقة التجربة:</p>
+    <div class="small">امسح QR الموجود على العربية، واختار سبب التواصل لإرسال تنبيه لصاحبها.</div>
+  </section>
+
+  <section id="visitor" class="card">
+    <h2>📩 إبلاغ صاحب العربية</h2>
+    <p class="small">اختار سبب التواصل، وبعدها اضغط إرسال عبر واتساب.</p>
+    <div id="reasons">
+      <button class="reason" onclick="pick(this,'عربيتك قافلة عليا')">🚫 عربيتك قافلة عليا</button>
+      <button class="reason" onclick="pick(this,'محتاج تحرك العربية')">🚗 محتاج تحرك العربية</button>
+      <button class="reason" onclick="pick(this,'السيارة تعيق مدخل أو جراج')">🚧 السيارة تعيق مدخل أو جراج</button>
+      <button class="reason" onclick="pick(this,'السيارة متوقفة في مكان غير مناسب')">🅿️ السيارة متوقفة في مكان غير مناسب</button>
+      <button class="reason" onclick="pick(this,'الأنوار ما زالت مفتوحة')">💡 الأنوار ما زالت مفتوحة</button>
+      <button class="reason" onclick="pick(this,'أحد أبواب السيارة مفتوح')">🚪 أحد أبواب السيارة مفتوح</button>
+      <button class="reason" onclick="pick(this,'إحدى نوافذ السيارة مفتوحة')">🪟 إحدى نوافذ السيارة مفتوحة</button>
+      <button class="reason" onclick="pick(this,'إنذار السيارة يعمل')">🔊 إنذار السيارة يعمل</button>
+      <button class="reason" onclick="pick(this,'يوجد إطار يبدو منخفض الهواء')">🛞 يوجد إطار يبدو منخفض الهواء</button>
+      <button class="reason" onclick="pick(this,'هناك شيء قريب من السيارة قد يضرها')">⚠️ شيء قريب من السيارة قد يضرها</button>
+      <button class="reason" onclick="pick(this,'حدث احتكاك أو اصطدام بالسيارة')">🚨 حدث احتكاك أو اصطدام بالسيارة</button>
+      <button class="reason" onclick="pick(this,'يوجد تسريب أسفل السيارة')">💧 يوجد تسريب أسفل السيارة</button>
+      <button class="reason" onclick="pick(this,'الزجاج أو المرآة يحتاج إلى مراجعة')">🪞 الزجاج أو المرآة يحتاج إلى مراجعة</button>
+      <button class="reason" onclick="pick(this,'نسيت شيئًا بجوار السيارة')">📦 يوجد شيء بجوار السيارة</button>
+      <button class="reason" onclick="pick(this,'أحتاج التواصل معك بخصوص السيارة')">📢 أحتاج التواصل معك بخصوص السيارة</button>
+      <button class="reason" onclick="pick(this,'سبب آخر')">💬 سبب آخر</button>
+    </div>
+    <textarea id="extra" placeholder="اكتب توضيحًا إضافيًا (اختياري)" style="display:none;width:100%;min-height:80px;padding:12px;border:1px solid #d5e0e7;border-radius:12px;font:inherit"></textarea>
+    <label for="urgency" class="small" style="display:block;margin-top:14px">درجة التنبيه</label>
+    <select id="urgency" style="width:100%;padding:12px;border:1px solid #d5e0e7;border-radius:12px;font:inherit;margin:7px 0 12px">
+      <option value="عادي">🔵 تنبيه عادي</option>
+      <option value="عاجل">🔴 تنبيه عاجل</option>
+    </select>
+    <button class="wa" onclick="sendWhatsApp()">إرسال التنبيه عبر واتساب</button>
+    <p class="small">سيتم فتح واتساب برسالة جاهزة، ويمكنك مراجعتها قبل إرسالها.</p>
+  </section>
+
+
+  <footer>أوصلي بسهولة © 2026 — نسخة تجريبية</footer>
+</main>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<script>
+const WA_NUMBER='201143774131';
+let selectedReason='';
+function pick(btn,reason){
+ selectedReason=reason;
+ document.querySelectorAll('.reason').forEach(b=>b.classList.remove('active'));
+ btn.classList.add('active');
+ document.getElementById('extra').style.display=reason==='سبب آخر'?'block':'none';
+}
+function sendWhatsApp(){
+  if(!selectedReason){alert('من فضلك اختار سبب التواصل أولاً');return;}
+  const extra=document.getElementById('extra').value.trim();
+  const urgency=document.getElementById('urgency') ? document.getElementById('urgency').value : 'عادي';
+  const descriptions = {
+    'عربيتك قافلة عليا':'سيارتك تعيق خروجي حاليًا. يُرجى تحريكها عندما تسمح ظروفك.',
+    'محتاج تحرك العربية':'أحتاج إلى تحريك سيارتك. يُرجى التواصل معي أو التحرك في أقرب وقت مناسب.',
+    'السيارة تعيق مدخل أو جراج':'السيارة تعيق مدخلًا أو جراجًا. يُرجى التحقق من مكانها.',
+    'السيارة متوقفة في مكان غير مناسب':'قد تكون السيارة متوقفة في مكان غير مناسب. يُرجى مراجعة موقعها.',
+    'الأنوار ما زالت مفتوحة':'لاحظت أن أنوار السيارة ما زالت مضاءة. يُرجى التأكد منها.',
+    'أحد أبواب السيارة مفتوح':'يبدو أن أحد أبواب السيارة مفتوح. يُرجى التحقق منها للاطمئنان.',
+    'إحدى نوافذ السيارة مفتوحة':'لاحظت أن إحدى نوافذ السيارة مفتوحة. يُرجى تأمينها عند الإمكان.',
+    'إنذار السيارة يعمل':'يبدو أن إنذار السيارة يعمل. أرسل إليك هذا التنبيه لتتمكن من التحقق.',
+    'يوجد إطار يبدو منخفض الهواء':'لاحظت أن أحد الإطارات قد يحتاج إلى فحص. يُرجى التحقق منه قبل التحرك.',
+    'هناك شيء قريب من السيارة قد يضرها':'يوجد شيء بالقرب من السيارة قد يسبب لها ضررًا. يُرجى التحقق من المكان.',
+    'حدث احتكاك أو اصطدام بالسيارة':'أود تنبيهك إلى احتمال حدوث احتكاك بالسيارة. يُرجى تفقدها عند الإمكان.',
+    'يوجد تسريب أسفل السيارة':'لاحظت وجود سائل أسفل السيارة. يُرجى فحص الأمر عند وصولك.',
+    'الزجاج أو المرآة يحتاج إلى مراجعة':'لاحظت أن الزجاج أو إحدى المرايا قد تحتاج إلى مراجعة. يُرجى التحقق منها.',
+    'نسيت شيئًا بجوار السيارة':'يوجد شيء بجوار السيارة قد يكون متعلقًا بك. يُرجى التحقق منه.',
+    'أحتاج التواصل معك بخصوص السيارة':'أحتاج إلى التواصل معك بخصوص سيارتك. يُرجى مراسلتي عندما يتاح لك ذلك.',
+    'سبب آخر':'يوجد تنبيه بخصوص سيارتك. ستجد التفاصيل الإضافية أدناه إن وُجدت.'
+  };
+  const description=descriptions[selectedReason] || 'يوجد تنبيه بخصوص سيارتك. يُرجى مراجعته.';
+  const message=`🚘 *أوصلي بسهولة | تنبيه يهمك*\n\nمرحبًا، وصل إليك تنبيه بخصوص سيارتك عبر منصة *أوصلي بسهولة*.\n\n📌 *سبب التنبيه:* ${selectedReason}\n${description}\n\n${urgency==='عاجل'?'🔴 *الأولوية: عاجل*':'🔵 *الأولوية: عادي'}${extra?'\n\n📝 *تفاصيل إضافية:* '+extra:''}\n\n*أوصلي بسهولة.. تواصل أسرع واطمئنان أكبر.*`;
+  window.open(`https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(message)}`,'_blank');
+}
+
+</script>
+</body>
+</html>
